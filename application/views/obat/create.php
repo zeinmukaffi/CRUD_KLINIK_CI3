@@ -34,7 +34,7 @@
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-primary">Simpan</button>
-                            <a href="/klinik_ci3/obat/index" class="btn btn-secondary">Back</a>
+                            <a href="/klinik_ci3/obat/index" class="btn btn-secondary"><i class="fa-solid fa-circle-arrow-left"></i> Back</a>
                         </form>
                     </div>
                 </div>

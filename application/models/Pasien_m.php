@@ -19,6 +19,11 @@
             return $this->db->get_where($table, $where);
         }
 
+        public function show($id, $table)
+        {
+            return $this->db->where('id', $id)->get($table)->row();
+        }
+
         public function update($where, $data, $table)
         {
             $this->db->where($where);

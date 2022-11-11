@@ -28,7 +28,7 @@
                                         <div class="col-6">
                                             <div class="form-group">
                                                 <label class="form-label">Jenis Kelamin</label>
-                                                <select name="jk" class="form-control">
+                                                <select name="jk" class="form-select">
                                                     <option selected disabled>----</option>
                                                     <option value="1">Laki Laki</option>
                                                     <option value="2">Perempuan</option>
@@ -46,7 +46,7 @@
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-primary">Simpan</button>
-                            <a href="/klinik_ci3/pasien/index" class="btn btn-secondary">Back</a>
+                            <a href="/klinik_ci3/pasien/index" class="btn btn-secondary"><i class="fa-solid fa-circle-arrow-left"></i> Back</a>                        
                         </form>
                     </div>
                 </div>

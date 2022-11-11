@@ -15,7 +15,7 @@
                                         <label>Nama Pasien</label>
                                         <select name="nama_pasien_id" class="form-select">
                                             <?php foreach($pasien as $p): ?>
-                                                <option value="<?= $p->id ?>" <?= $p->id == $berobat->nama_pasien_id ? 'selected' : '' ?>><?= $p->nama_pasien; ?></option>
+                                                <option value="<?= $p->id ?>" <?php if($p->id == $berobat->nama_pasien_id) echo "selected"; ?>><?= $p->nama_pasien ?></option>
                                             <?php endforeach ;?>
                                         </select>
                                     </div>
@@ -41,21 +41,41 @@
                                         <div class="col-6">
                                             <div class="form-group">
                                                 <label class="form-label">RS Rujukan</label>
-                                                <select name="rujukan_id" class="form-select">
-                                                    <?php foreach($rs_rujuk as $rs): ?>
-                                                        <option value="<?= $rs->id ?>" <?php if($rs->id == $berobat->rujukan_id) echo "selected"; ?>><?= $rs->nama_rs ?></option>
-                                                    <?php endforeach ;?>
-                                                </select>
+                                                <?php if($berobat->rujukan_id == null): ?>
+                                                    <select name="rujukan_id" class="form-select">
+                                                        <option>-</option>
+                                                        <?php foreach($rs_rujuk as $rs): ?>
+                                                            <option value="<?= $rs->id ?>" <?php if($rs->id == $berobat->rujukan_id) echo "selected"; ?>><?= $rs->nama_rs ?></option>
+                                                        <?php endforeach ;?>
+                                                    </select>
+                                                <?php else: ?>
+                                                    <select name="rujukan_id" class="form-select">
+                                                        <?php foreach($rs_rujuk as $rs): ?>
+                                                            <option value="<?= $rs->id ?>" <?php if($rs->id == $berobat->rujukan_id) echo "selected"; ?>><?= $rs->nama_rs ?></option>
+                                                        <?php endforeach ;?>
+                                                        <option>-</option>
+                                                    </select>
+                                                <?php endif; ?>
                                             </div>
                                         </div>
                                         <div class="col-6">
                                             <div class="form-group">
                                                 <label class="form-label">Obat</label>
-                                                <select name="obat_id" class="form-select">
-                                                    <?php foreach($obat as $p): ?>
-                                                        <option value="<?= $p->id ?>" <?php if($p->id == $berobat->obat_id) echo "selected"; ?>><?= $p->nama_obat ?></option>
-                                                    <?php endforeach ;?>
-                                                </select>
+                                                <?php if($berobat->rujukan_id == null): ?>
+                                                    <select name="obat_id" class="form-select">
+                                                        <option>-</option>
+                                                        <?php foreach($obat as $o): ?>
+                                                            <option value="<?= $o->id ?>" <?php if($o->id == $berobat->obat_id) echo "selected"; ?>><?= $o->nama_obat ?></option>
+                                                        <?php endforeach ;?>
+                                                    </select>
+                                                <?php else: ?>
+                                                    <select name="obat_id" class="form-select">
+                                                        <?php foreach($obat as $o): ?>
+                                                            <option value="<?= $o->id ?>" <?php if($o->id == $berobat->obat_id) echo "selected"; ?>><?= $o->nama_obat ?></option>
+                                                        <?php endforeach ;?>
+                                                            <option>-</option>
+                                                    </select>
+                                                <?php endif; ?>
                                             </div>
                                         </div>
                                     </div>
@@ -76,7 +96,7 @@
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-primary">Simpan</button>
-                            <a href="/klinik_ci3/berobat/index" class="btn btn-secondary">Back</a>
+                            <a href="/klinik_ci3/berobat/index" class="btn btn-secondary"><i class="fa-solid fa-circle-arrow-left"></i> Back</a>
                         </form>
                     </div>
                 </div>

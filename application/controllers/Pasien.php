@@ -61,6 +61,15 @@
             $this->load->view('template/footer');
         }
 
+        public function detail($id)
+        {
+            $data['pasien'] = $this->Pasien_m->show($id, 'pasien');            
+            $this->load->view('template/header');
+            $this->load->view('template/sidebar');
+            $this->load->view('pasien/detail', $data);
+            $this->load->view('template/footer');
+        }
+        
         public function update()
         {
             $id = $this->input->post('id');

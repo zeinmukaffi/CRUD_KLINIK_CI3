@@ -11,9 +11,9 @@
                             <div class="row">
                                 <div class="col-6">
                                     <div class="form-group">
-                                        <label>Nama Pasien</label>
+                                        <label class="form-label">Nama Pasien</label>
                                         <select required name="nama_pasien_id" class="form-select">
-                                            <option selected >----</option>
+                                            <option selected ></option>
                                             <?php foreach($pasien as $p): ?>
                                                 <option value="<?= $p->id ?>"><?= $p->nama_pasien; ?></option>
                                             <?php endforeach ;?>
@@ -21,9 +21,9 @@
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <label>Nama Dokter</label>
+                                    <label class="form-label">Nama Dokter</label>
                                     <select required name="nama_dokter_id" class="form-select">
-                                        <option selected  value="">----</option>
+                                        <option selected value=""></option>
                                         <?php foreach($dokter as $d): ?>
                                             <option value="<?= $d->id ?>"><?= $d->nama_dokter; ?></option>
                                         <?php endforeach ;?>
@@ -34,7 +34,7 @@
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label class="form-label">Keluhan</label>
-                                        <textarea required class="form-control" rows="3" name="keluhan""></textarea>
+                                        <textarea required class="form-control" rows="3" name="keluhan""></textarea> 
                                     </div>
                                 </div>
                                 <div class="col-6">
@@ -43,7 +43,7 @@
                                             <div class="form-group">
                                                 <label class="form-label">RS Rujukan</label>
                                                 <select name="rujukan_id" class="form-select">
-                                                        <option value="NULL">----</option>
+                                                        <option></option>
                                                         <?php foreach($rs_rujuk as $r): ?>
                                                             <option value="<?= $r->id ?>"><?= $r->nama_rs ?></option>
                                                         <?php endforeach ;?>
@@ -54,7 +54,7 @@
                                             <div class="form-group">
                                                 <label class="form-label">Obat</label>
                                                 <select name="obat_id" class="form-select">
-                                                    <option value="NULL">----</option>
+                                                        <option></option>
                                                         <?php foreach($obat as $o): ?>
                                                             <option value="<?= $o->id ?>"><?= $o->nama_obat ?></option>
                                                         <?php endforeach ;?>
@@ -79,7 +79,7 @@
                                     </div>
                             </div>
                             <button type="submit" class="btn btn-primary">Simpan</button>
-                            <a href="/klinik_ci3/berobat/index" class="btn btn-secondary">Back</a>
+                            <a href="/klinik_ci3/berobat/index" class="btn btn-secondary"><i class="fa-solid fa-circle-arrow-left"></i> Back</a>
                         </form>
                     </div>
                 </div>

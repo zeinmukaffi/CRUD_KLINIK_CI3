@@ -41,6 +41,14 @@
             $obat_id = $this->input->post('obat_id');
             $biaya = $this->input->post('biaya');
 
+            if ($_POST['rujukan_id'] === '') {
+              $_POST['rujukan_id'] = null;
+            }
+
+            if ($_POST['obat_id'] === '') {
+              $_POST['obat_id'] = null;
+            }
+            
             $data = array(
                 'nama_pasien_id' => $nama_pasien_id,
                 'tgl_berobat' => $tgl_berobat,
@@ -62,6 +70,21 @@
             </div>
             </div>');
             redirect('berobat/index');
+        }
+
+        public function detail($id)
+        {
+            $this->load->model('Dokter_m', 'Obat_m', 'Pasien_m', 'Rs_Rujuk_m');
+            $data['dokter'] = $this->Dokter_m->index();
+            $data['obat'] = $this->Obat_m->index();
+            $data['pasien'] = $this->Pasien_m->index();
+            $data['rs_rujuk'] = $this->Rs_Rujuk_m->index();
+            $data['berobat'] = $this->Berobat_m->show($id, 'berobat');
+
+            $this->load->view('template/header');
+            $this->load->view('template/sidebar');
+            $this->load->view('berobat/detail', $data);
+            $this->load->view('template/footer');
         }
 
         public function edit($id)
@@ -90,6 +113,14 @@
             $obat_id = $this->input->post('obat_id');
             $biaya = $this->input->post('biaya');
 
+            if ($_POST['rujukan_id'] === '') {
+              $_POST['rujukan_id'] = null;
+            }
+
+            if ($_POST['obat_id'] === '') {
+              $_POST['obat_id'] = null;
+            }
+            
             $data = array(
                 'nama_pasien_id' => $nama_pasien_id,
                 'tgl_berobat' => $tgl_berobat,

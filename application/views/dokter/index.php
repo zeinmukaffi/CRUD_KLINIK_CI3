@@ -10,7 +10,7 @@ d<div class="main-content">
                         <div class="table-responsive">
                             <a href="create" class="btn btn-primary mb-3">Tambah Data</a>
                             <?= $this->session->flashdata('message'); ?>
-                            <table class="table table-hover table-md">
+                            <table class="table table-hover table-md table-borderless">
                                 <thead>
                                     <tr>
                                         <th>#</th>

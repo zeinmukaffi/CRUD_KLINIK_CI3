@@ -26,6 +26,11 @@
             return $this->db->where('id', $id)->get($table)->row();
         }
 
+        public function show($id, $table)
+        {
+            return $this->db->where('id', $id)->get($table)->row();
+        }
+
         public function update($id, $data, $table)
         {
             $this->db->where($id, 'id')->update($table, $data);
