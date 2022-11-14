@@ -40,7 +40,15 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <a href="/klinik_ci3/pasien" class="btn btn-secondary"><i class="fa-solid fa-circle-arrow-left"></i> Back</a>
+                        <div class="d-flex gap-2">
+                            <a href="/klinik_ci3/pasien" class="btn btn-secondary"><i class="fas fa-arrow-left"></i></a>
+                            <div onclick="javascript: return confirm('Apakah Anda Yakin Ingin Hapus Data?')">
+                                <?php echo anchor('pasien/destroy/'.$pasien->id, '<div class="btn btn-danger"><i class="fas fa-trash"></i></div>') ?>
+                            </div>
+                            <div>
+                                <?php echo anchor('pasien/edit/'.$pasien->id, '<div class="btn btn-warning"><i class="fas fa-pen"></i></div>') ?>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

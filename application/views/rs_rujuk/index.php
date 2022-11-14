@@ -29,10 +29,12 @@ d<div class="main-content">
                                             <td><?= $item->alamat ?></td>
                                             <td class="d-flex" style="gap: 0.5rem;">
                                                 <div>
-                                                    <?php echo anchor('rs_rujuk/edit/'.$item->id, '<div class="btn btn-warning"><i class="fas fa-pen"></i></div>') ?>
+                                                    <?php echo anchor('rs_rujuk/edit/'.$item->id, '<div data-toggle="tooltip"
+															title="Edit" class="btn btn-warning"><i class="fas fa-pen"></i></div>') ?>
                                                 </div>
                                                 <div onclick="javascript: return confirm('Apakah Anda Yakin Ingin Hapus Data?')">
-                                                    <?php echo anchor('rs_rujuk/destroy/'.$item->id, '<div class="btn btn-danger"><i class="fas fa-trash"></i></div>') ?>
+                                                    <?php echo anchor('rs_rujuk/destroy/'.$item->id, '<div data-toggle="tooltip"
+															title="Delete" class="btn btn-danger"><i class="fas fa-trash"></i></div>') ?>
                                                 </div>
                                             </td>
                                         </tr>

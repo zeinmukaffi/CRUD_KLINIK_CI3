@@ -39,13 +39,14 @@ d<div class="main-content">
                                             <!-- <td><?= $item->biaya ?></td> -->
                                             <td class="d-flex" style="gap: 0.5rem;">
                                                 <div>
-                                                    <?php echo anchor('berobat/edit/'.$item->id, '<div class="btn btn-warning"><i class="fas fa-pen"></i></div>') ?>
+                                                    <?php echo anchor('berobat/edit/'.$item->id, '<div      data-toggle="tooltip" title="Edit" class="btn btn-warning">
+                                                    <i class="fas fa-pen"></i></div>') ?>
                                                 </div>
                                                 <div>
-                                                    <?php echo anchor('berobat/detail/'.$item->id, '<div class="btn btn-info"><i class="fas fa-eye"></i></div>')?>
+                                                    <?php echo anchor('berobat/detail/'.$item->id, '<div data-toggle="tooltip" title="Details" class="btn btn-info"><i class="fas fa-eye"></i></div>')?>
                                                 </div>
                                                 <div onclick="javascript: return confirm('Apakah Anda Yakin Ingin Hapus Data?')">
-                                                    <?php echo anchor('berobat/destroy/'.$item->id, '<div class="btn btn-danger"><i class="fas fa-trash"></i></div>') ?>
+                                                    <?php echo anchor('berobat/destroy/'.$item->id, '<div data-toggle="tooltip" title="Delete" class="btn btn-danger"><i class="fas fa-trash"></i></div>') ?>
                                                 </div>
                                             </td>
                                         </tr>

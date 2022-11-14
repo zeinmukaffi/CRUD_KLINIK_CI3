@@ -18,8 +18,8 @@
                                     <label class="form-label">Alamat</label>
                                     <textarea name="alamat" class="form-control"><?= $item->alamat; ?></textarea>
                                 </div>
+                                <a href="/klinik_ci3/berobat" class="btn btn-secondary"><i class="fas fa-arrow-left"></i></a>                            
                                 <button type="submit" class="btn btn-primary" onclick="javascript: return confirm('Apakah Anda Yakin Ingin Edit Data?')">Simpan</button>
-                                <a href="/klinik_ci3/rs_rujuk" class="btn btn-secondary">Back</a>
                             </form>
                         <?php endforeach; ?>
                     </div>

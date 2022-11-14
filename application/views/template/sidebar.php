@@ -20,10 +20,10 @@
 							<a href="/klinik_ci3/berobat" class="nav-link"><i class="fas fa-procedures"></i> <span>Berobat</span></a>
 						</li>
 						<li>
-							<a href="/klinik_ci3/dokter" class="nav-link"><i class="fa-solid fa-user-doctor"></i> <span>Dokter</span></a>
+							<a href="/klinik_ci3/dokter" class="nav-link"><i class="fas fa-user-doctor"></i> <span>Dokter</span></a>
 						</li>
 						<li>
-                            <a class="nav-link" href="/klinik_ci3/pasien"><i class="fa-solid fa-hospital-user"></i> <span>Pasien</span></a>
+                            <a class="nav-link" href="/klinik_ci3/pasien"><i class="fas fa-hospital-user"></i> <span>Pasien</span></a>
 						</li>
 						<li>
                             <a class="nav-link" href="/klinik_ci3/obat"><i class="fas fa-tablets"></i><span>Obat</span></a>

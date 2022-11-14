@@ -16,8 +16,8 @@
                                 <label class="form-label">Alamat</label>
                                 <textarea name="alamat" class="form-control"></textarea>
                             </div>
+                            <a href="/klinik_ci3/rs_rujuk" class="btn btn-secondary"><i class="fas fa-arrow-left"></i></a>                        
                             <button type="submit" class="btn btn-primary">Simpan</button>
-                            <a href="/klinik_ci3/rs_rujuk" class="btn btn-secondary">Back</a>
                         </form>
                     </div>
                 </div>
