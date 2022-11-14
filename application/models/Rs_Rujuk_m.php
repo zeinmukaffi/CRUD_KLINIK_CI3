@@ -9,6 +9,11 @@
             return $this->db->get('rs_rujuk')->result();
         }
 
+        public function count()
+        {
+            return $this->db->from("rs_rujuk")->count_all_results();
+        }
+
         public function store($data, $table)
         {
             $this->db->insert($table, $data);

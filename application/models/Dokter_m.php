@@ -8,6 +8,11 @@
         {
             return $this->db->get('dokter')->result();
         }
+
+        public function count()
+        {
+            return $this->db->from("dokter")->count_all_results();
+        }
     
         public function store($data, $table)
         {

@@ -8,14 +8,14 @@
 						<div class="col-lg-3 col-md-6 col-sm-6 col-12">
 							<div class="card card-statistic-1">
 								<div class="card-icon bg-primary">
-									<i class="far fa-user"></i>z
+									<i class="fas fa-user-doctor"></i>
 								</div>
 								<div class="card-wrap">
 									<div class="card-header">
-										<h4>Total Admin</h4>
+										<h4>Jumlah Dokter</h4>
 									</div>
 									<div class="card-body">
-										10
+										<?= $dokter; ?>
 									</div>
 								</div>
 							</div>
@@ -23,14 +23,14 @@
 						<div class="col-lg-3 col-md-6 col-sm-6 col-12">
 							<div class="card card-statistic-1">
 								<div class="card-icon bg-danger">
-									<i class="far fa-newspaper"></i>
+									<i class="fas fa-hospital-user"></i>
 								</div>
 								<div class="card-wrap">
 									<div class="card-header">
-										<h4>News</h4>
+										<h4>Pasien Berobat</h4>
 									</div>
 									<div class="card-body">
-										42
+										<?= $berobat; ?>
 									</div>
 								</div>
 							</div>
@@ -38,14 +38,14 @@
 						<div class="col-lg-3 col-md-6 col-sm-6 col-12">
 							<div class="card card-statistic-1">
 								<div class="card-icon bg-warning">
-									<i class="far fa-file"></i>
+									<i class="fas fa-hospital"></i>
 								</div>
 								<div class="card-wrap">
 									<div class="card-header">
-										<h4>Reports</h4>
+										<h4>RS Rujukan</h4>
 									</div>
 									<div class="card-body">
-										1,201
+										<?= $rs_rujuk; ?>
 									</div>
 								</div>
 							</div>
@@ -53,14 +53,14 @@
 						<div class="col-lg-3 col-md-6 col-sm-6 col-12">
 							<div class="card card-statistic-1">
 								<div class="card-icon bg-success">
-									<i class="fas fa-circle"></i>
+									<i class="fas fa-tablets"></i>
 								</div>
 								<div class="card-wrap">
 									<div class="card-header">
-										<h4>Online Users</h4>
+										<h4>Obat Tersedia</h4>
 									</div>
 									<div class="card-body">
-										47
+										<?= $obat; ?>
 									</div>
 								</div>
 							</div>

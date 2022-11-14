@@ -9,6 +9,11 @@
             return $this->db->get('obat')->result();
         }
 
+        public function count()
+        {
+            return $this->db->from("obat")->count_all_results();
+        }
+
         public function store($data, $table)
         {
             $this->db->insert($table, $data);
