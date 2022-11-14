@@ -8,7 +8,7 @@ d<div class="main-content">
                 <div class="card">
                     <div class="card-body p-3">
                         <div class="table-responsive">
-                            <a href="create" class="btn btn-primary mb-3">Tambah Data</a>
+                            <a href="dokter/create" class="btn btn-primary mb-3">Tambah Data</a>
                             <?= $this->session->flashdata('message'); ?>
                             <table class="table table-hover table-md table-borderless">
                                 <thead>

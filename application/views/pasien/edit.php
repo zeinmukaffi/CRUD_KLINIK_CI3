@@ -45,7 +45,7 @@
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-primary" onclick="javascript: return confirm('Apakah Anda Yakin Ingin Edit Data?')">Simpan</button>
-                            <a href="/klinik_ci3/pasien/index" class="btn btn-secondary"><i class="fa-solid fa-circle-arrow-left"></i> Back</a>                        </form>
+                            <a href="/klinik_ci3/pasien" class="btn btn-secondary"><i class="fa-solid fa-circle-arrow-left"></i> Back</a>                        </form>
                         <?php endforeach;?>
                     </div>
                 </div>

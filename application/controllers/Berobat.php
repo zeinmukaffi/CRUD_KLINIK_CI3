@@ -41,12 +41,12 @@
             $obat_id = $this->input->post('obat_id');
             $biaya = $this->input->post('biaya');
 
-            if ($_POST['rujukan_id'] === '') {
-              $_POST['rujukan_id'] = null;
+            if ($rujukan_id === '') {
+              $rujukan_id = null;
             }
 
-            if ($_POST['obat_id'] === '') {
-              $_POST['obat_id'] = null;
+            if ($obat_id === '') {
+              $obat_id = null;
             }
             
             $data = array(
@@ -113,12 +113,12 @@
             $obat_id = $this->input->post('obat_id');
             $biaya = $this->input->post('biaya');
 
-            if ($_POST['rujukan_id'] === '') {
-              $_POST['rujukan_id'] = null;
+            if ($rujukan_id === '-') {
+              $rujukan_id = null;
             }
 
-            if ($_POST['obat_id'] === '') {
-              $_POST['obat_id'] = null;
+            if ($obat_id === '-') {
+              $obat_id = null;
             }
             
             $data = array(

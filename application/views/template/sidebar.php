@@ -17,19 +17,19 @@
 						</li>
 						<li class="menu-header">Data Menu</li>
 						<li>
-							<a href="/klinik_ci3/berobat/index" class="nav-link"><i class="fas fa-procedures"></i> <span>Berobat</span></a>
+							<a href="/klinik_ci3/berobat" class="nav-link"><i class="fas fa-procedures"></i> <span>Berobat</span></a>
 						</li>
 						<li>
-							<a href="/klinik_ci3/dokter/index" class="nav-link"><i class="fa-solid fa-user-doctor"></i> <span>Dokter</span></a>
+							<a href="/klinik_ci3/dokter" class="nav-link"><i class="fa-solid fa-user-doctor"></i> <span>Dokter</span></a>
 						</li>
 						<li>
-                            <a class="nav-link" href="/klinik_ci3/pasien/index"><i class="fa-solid fa-hospital-user"></i> <span>Pasien</span></a>
+                            <a class="nav-link" href="/klinik_ci3/pasien"><i class="fa-solid fa-hospital-user"></i> <span>Pasien</span></a>
 						</li>
 						<li>
-                            <a class="nav-link" href="/klinik_ci3/obat/index"><i class="fas fa-tablets"></i><span>Obat</span></a>
+                            <a class="nav-link" href="/klinik_ci3/obat"><i class="fas fa-tablets"></i><span>Obat</span></a>
 						</li>
 						<li>
-                            <a class="nav-link" href="/klinik_ci3/rs_rujuk/index"><i class="fas fa-hospital"></i><span>Rumah Sakit</span></a>
+                            <a class="nav-link" href="/klinik_ci3/rs_rujuk"><i class="fas fa-hospital"></i><span>Rumah Sakit</span></a>
 						</li>
 					</ul>
 				</aside>

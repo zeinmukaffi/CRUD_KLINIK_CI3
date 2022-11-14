@@ -61,7 +61,7 @@
                                         <div class="col-6">
                                             <div class="form-group">
                                                 <label class="form-label">Obat</label>
-                                                <?php if($berobat->rujukan_id == null): ?>
+                                                <?php if($berobat->obat_id == null): ?>
                                                     <select name="obat_id" class="form-select">
                                                         <option>-</option>
                                                         <?php foreach($obat as $o): ?>
@@ -96,7 +96,7 @@
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-primary">Simpan</button>
-                            <a href="/klinik_ci3/berobat/index" class="btn btn-secondary"><i class="fa-solid fa-circle-arrow-left"></i> Back</a>
+                            <a href="/klinik_ci3/berobat" class="btn btn-secondary"><i class="fa-solid fa-circle-arrow-left"></i> Back</a>
                         </form>
                     </div>
                 </div>

@@ -19,7 +19,7 @@
                                     <textarea name="alamat" class="form-control"><?= $item->alamat; ?></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary" onclick="javascript: return confirm('Apakah Anda Yakin Ingin Edit Data?')">Simpan</button>
-                                <a href="/klinik_ci3/rs_rujuk/index" class="btn btn-secondary">Back</a>
+                                <a href="/klinik_ci3/rs_rujuk" class="btn btn-secondary">Back</a>
                             </form>
                         <?php endforeach; ?>
                     </div>
