@@ -105,6 +105,7 @@
 <script type="text/javascript">
     function checkOption(obj) {
         var input = document.getElementById("val_equipnofc");
-        input.disabled = obj.value == "1";
+        input.disabled = obj.value == "0";
     }
 </script>
+

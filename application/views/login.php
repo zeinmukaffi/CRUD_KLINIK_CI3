@@ -27,7 +27,7 @@
 </script>
 <!-- /END GA --></head>
 
-<body>
+<body class="bg-primary">
   <div id="app">
     <section class="section">
       <div class="container mt-5">

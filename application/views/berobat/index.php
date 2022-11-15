@@ -8,9 +8,9 @@ d<div class="main-content">
                 <div class="card">
                     <div class="card-body p-3">
                         <div class="table-responsive">
-                            <a href="berobat/create" class="btn btn-primary mb-3">Tambah Data</a>
+                            <a href="<?= base_url(); ?>berobat/create" class="btn btn-primary mb-3">Tambah Data</a>
                             <?= $this->session->flashdata('message'); ?>
-                            <table class="table table-hover table-md table-borderless">
+                            <table class="table table-hover table-md">
                                 <thead>
                                     <tr>
                                         <th>#</th>
@@ -23,6 +23,7 @@ d<div class="main-content">
                                         <!-- <th>Biaya</th> -->
                                         <th>Aksi</th>
                                     </tr>
+                                    
                                 </thead>
                                 <tbody>
                                     <?php
@@ -39,14 +40,14 @@ d<div class="main-content">
                                             <!-- <td><?= $item->biaya ?></td> -->
                                             <td class="d-flex" style="gap: 0.5rem;">
                                                 <div>
-                                                    <?php echo anchor('berobat/edit/'.$item->id, '<div      data-toggle="tooltip" title="Edit" class="btn btn-warning">
+                                                    <?= anchor('berobat/edit/'.$item->id, '<div data-toggle="tooltip" title="Edit" class="btn btn-warning">
                                                     <i class="fas fa-pen"></i></div>') ?>
                                                 </div>
                                                 <div>
-                                                    <?php echo anchor('berobat/detail/'.$item->id, '<div data-toggle="tooltip" title="Details" class="btn btn-info"><i class="fas fa-eye"></i></div>')?>
+                                                    <?= anchor('berobat/detail/'.$item->id, '<div data-toggle="tooltip" title="Details" class="btn btn-info"><i class="fas fa-eye"></i></div>')?>
                                                 </div>
                                                 <div onclick="javascript: return confirm('Apakah Anda Yakin Ingin Hapus Data?')">
-                                                    <?php echo anchor('berobat/destroy/'.$item->id, '<div data-toggle="tooltip" title="Delete" class="btn btn-danger"><i class="fas fa-trash"></i></div>') ?>
+                                                    <?= anchor('berobat/destroy/'.$item->id, '<div data-toggle="tooltip" title="Delete" class="btn btn-danger"><i class="fas fa-trash"></i></div>') ?>
                                                 </div>
                                             </td>
                                         </tr>
