@@ -61,64 +61,64 @@
             $this->load->view('template/footer');
         }
 
-        public function detail($id)
-        {
-            $data['pasien'] = $this->Pasien_m->show($id, 'pasien');            
-            $this->load->view('template/header');
-            $this->load->view('template/sidebar');
-            $this->load->view('pasien/detail', $data);
-            $this->load->view('template/footer');
-        }
-        
         public function update()
         {
-            $id = $this->input->post('id');
-            $nama_pasien = $this->input->post('nama_pasien');
-            $alamat = $this->input->post('alamat');
-            $jk = $this->input->post('jk');
-            $no_telp = $this->input->post('no_telp');
-            $tgl_lahir = $this->input->post('tgl_lahir');
+          $id = $this->input->post('id');
+          $nama_pasien = $this->input->post('nama_pasien');
+          $alamat = $this->input->post('alamat');
+          $jk = $this->input->post('jk');
+          $no_telp = $this->input->post('no_telp');
+          $tgl_lahir = $this->input->post('tgl_lahir');
 
             $data = array(
-                'nama_pasien' => $nama_pasien,
-                'alamat' => $alamat,
-                'jk' => $jk,
-                'no_telp' => $no_telp,
-                'tgl_lahir' => $tgl_lahir,
+              'nama_pasien' => $nama_pasien,
+              'alamat' => $alamat,
+              'jk' => $jk,
+              'no_telp' => $no_telp,
+              'tgl_lahir' => $tgl_lahir,
             );
-
+            
             $where = array(
-                'id' => $id
+              'id' => $id
             );
-
+            
             $this->Pasien_m->update($where, $data, 'pasien');
             $this->session->set_flashdata('message', 
             '<div class="alert alert-warning alert-dismissible show fade">
             <div class="alert-body">
-              <button class="close" data-dismiss="alert">
-                <span>&times;</span>
-              </button>
-              Data Berhasil Di Update
+            <button class="close" data-dismiss="alert">
+            <span>&times;</span>
+            </button>
+            Data Berhasil Di Update
             </div>
             </div>');
             redirect('pasien/index');
-        }
-
-        public function destroy($id)
-        {
-            $where = array('id' => $id);
-            $this->Pasien_m->destroy($where, 'pasien');
-            $this->session->set_flashdata('message', 
-            '<div class="alert alert-danger alert-dismissible show fade">
-            <div class="alert-body">
-              <button class="close" data-dismiss="alert">
-                <span>&times;</span>
-              </button>
-              Data Berhasil Di Hapus
-            </div>
-            </div>');
-            redirect('pasien/index');
-        }
+          }
+          
+          public function detail($id)
+          {
+              $data['pasien'] = $this->Pasien_m->show($id, 'pasien');            
+              $this->load->view('template/header');
+              $this->load->view('template/sidebar');
+              $this->load->view('pasien/detail', $data);
+              $this->load->view('template/footer');
+          }
+        
+          public function destroy($id)
+          {
+              $where = array('id' => $id);
+              $this->Pasien_m->destroy($where, 'pasien');
+              $this->session->set_flashdata('message', 
+              '<div class="alert alert-danger alert-dismissible show fade">
+              <div class="alert-body">
+                <button class="close" data-dismiss="alert">
+                  <span>&times;</span>
+                </button>
+                Data Berhasil Di Hapus
+              </div>
+              </div>');
+              redirect('pasien/index');
+          }
 
     }
 

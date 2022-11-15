@@ -68,7 +68,7 @@
                                         <div class="col-4">
                                             <div class="form-group">
                                                 <label class="form-label">Obat</label>
-                                                <select name="obat_id" class="form-select">
+                                                <select name="obat_id" id="o_equipnofc" class="form-select">
                                                         <option></option>
                                                         <?php foreach($obat as $o): ?>
                                                             <option value="<?= $o->id ?>"><?= $o->nama_obat ?></option>
@@ -106,6 +106,8 @@
     function checkOption(obj) {
         var input = document.getElementById("val_equipnofc");
         input.disabled = obj.value == "0";
+        var input = document.getElementById("o_equipnofc");
+        input.disabled = obj.value == "1";
     }
 </script>
 

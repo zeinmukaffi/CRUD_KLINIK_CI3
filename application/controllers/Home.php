@@ -19,6 +19,7 @@ class Home extends CI_Controller {
 		$data['pasien'] = $this->Pasien_m->index();
 		$data['rs_rujuk'] = $this->Rs_Rujuk_m->count();
 		$data['berobat'] = $this->Berobat_m->count();
+		$data['data_pasien'] =  $this->Berobat_m->history();
 
 		$this->load->view('template/header');
 		$this->load->view('template/sidebar');

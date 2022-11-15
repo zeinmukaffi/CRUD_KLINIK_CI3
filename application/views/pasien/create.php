@@ -33,6 +33,7 @@
                                                     <option value="1">Laki Laki</option>
                                                     <option value="2">Perempuan</option>
                                                 </select>
+                                                
                                             </div>
                                         </div>
                                         <div class="col-6">

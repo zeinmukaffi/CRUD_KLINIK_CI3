@@ -16,6 +16,17 @@
             return $query->result();
         }
 
+        public function history()
+        {
+            $this->db->select('berobat.id, pasien.nama_pasien, berobat.keluhan');
+            $this->db->from('berobat');
+            $this->db->join('pasien', 'pasien.id=berobat.nama_pasien_id');
+            $this->db->limit(5);
+            $this->db->order_by('id',"DESC");
+            $query = $this->db->get();
+            return $query->result();
+        }
+
         public function count()
         {
             return $this->db->from("berobat")->count_all_results();

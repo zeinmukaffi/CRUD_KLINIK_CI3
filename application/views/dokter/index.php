@@ -1,4 +1,5 @@
-d<div class="main-content">
+<!-- Direktori : application/views/dokter/index.php -->
+<div class="main-content">
 	<section class="section">
 		<div class="section-header">
 			<h1>Data Dokter</h1>
