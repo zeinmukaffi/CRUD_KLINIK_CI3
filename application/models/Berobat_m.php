@@ -37,12 +37,12 @@
             $this->db->insert($table, $data);
         }
 
-        public function edit($id, $table)
+        public function show($id, $table)
         {
             return $this->db->where('id', $id)->get($table)->row();
         }
 
-        public function show($id, $table)
+        public function edit($id, $table)
         {
             return $this->db->where('id', $id)->get($table)->row();
         }
