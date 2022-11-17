@@ -103,7 +103,8 @@
     </section>
 </div>
 <script type="text/javascript">
-    function checkOption(obj) {
+    function checkOption(obj) 
+    {
         var input = document.getElementById("val_equipnofc");
         input.disabled = obj.value == "0";
         var input = document.getElementById("o_equipnofc");

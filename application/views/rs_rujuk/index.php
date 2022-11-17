@@ -8,7 +8,7 @@
                 <div class="card">
                     <div class="card-body p-3">
                         <div class="table-responsive">
-                            <a href="<?= base_url(); ?>pasien/create" class="btn btn-primary mb-3">Tambah Data RS</a>
+                            <a href="<?= base_url(); ?>rs_rujuk/create" class="btn btn-primary mb-3">Tambah Data RS</a>
                             <?= $this->session->flashdata('message'); ?>
                             <table class="table table-hover table-md">
                                 <thead>
