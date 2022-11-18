@@ -40,6 +40,7 @@
             $rujukan_id = $this->input->post('rujukan_id');
             $obat_id = $this->input->post('obat_id');
             $biaya = $this->input->post('biaya');
+            $konfirm_rujuk = $this->input->post('konfirm_rujuk');
 
             if ($rujukan_id === '') {
               $rujukan_id = null;
@@ -57,6 +58,7 @@
                 'rujukan_id' => $rujukan_id,
                 'obat_id' => $obat_id,
                 'biaya' => $biaya,
+                'konfirm_rujuk' => $konfirm_rujuk,
             );
 
             $this->Berobat_m->store($data, 'berobat');
@@ -112,6 +114,7 @@
             $rujukan_id = $this->input->post('rujukan_id');
             $obat_id = $this->input->post('obat_id');
             $biaya = $this->input->post('biaya');
+            $konfirm_rujuk = $this->input->post('konfirm_rujuk');
 
             if ($rujukan_id === '-') {
               $rujukan_id = null;
@@ -129,6 +132,7 @@
                 'rujukan_id' => $rujukan_id,
                 'obat_id' => $obat_id,
                 'biaya' => $biaya,
+                'konfirm_rujuk' => $konfirm_rujuk,
             );
 
             $where = array(

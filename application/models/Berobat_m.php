@@ -18,7 +18,7 @@
 
         public function history()
         {
-            $this->db->select('berobat.id, pasien.nama_pasien, berobat.keluhan');
+            $this->db->select('berobat.id, pasien.nama_pasien, berobat.*');
             $this->db->from('berobat');
             $this->db->join('pasien', 'pasien.id=berobat.nama_pasien_id');
             $this->db->limit(4);

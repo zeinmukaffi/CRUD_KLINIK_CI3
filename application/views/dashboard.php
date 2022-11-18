@@ -112,7 +112,7 @@
 			<div class="col-lg-4 col-md-12 col-12 col-sm-12">
 				<div class="card">
 					<div class="card-header">
-						<h4>Recent Activities</h4>
+						<h4>Histori Berobat</h4>
 					</div>
 					<div class="card-body">
 						<ul class="list-unstyled list-unstyled-border">
@@ -121,7 +121,7 @@
 								<img class="mr-3 rounded-circle" width="50"
 									src="<?php echo base_url() ?>assets/img/avatar/avatar-1.png" alt="avatar">
 								<div class="media-body">
-									<!-- <div class="float-right text-primary">Now</div> -->
+									<div class="float-right text-primary"><?= $row->tgl_berobat; ?></div>
 									<div class="media-title"><?= $row->nama_pasien; ?></div>
 									<span class="text-small text-muted"><?= $row->keluhan; ?></span>
 								</div>

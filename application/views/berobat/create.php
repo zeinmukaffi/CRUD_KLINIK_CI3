@@ -43,21 +43,25 @@
                                     <div class="row">
                                         <div class="col-3 form-group">
                                             <label>Rujuk Pasien</label>
-                                            <div class="d-flex gap-3">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="konfirm_rujuk" value="1" id="val_equipfc" onChange="checkOption(this)">
-                                                    <label class="form-check-label">Ya</label>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="konfirm_rujuk" value="1" id="val_equipfc" onChange="checkOption(this)">
+                                                        <label class="form-check-label">Ya</label>
+                                                    </div>
                                                 </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="konfirm_rujuk" value="0" id="val_equipfc" onChange="checkOption(this)">
-                                                    <label class="form-check-label">Tidak</label>
+                                                <div class="col-6">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="konfirm_rujuk" value="0" id="val_equipfc" onChange="checkOption(this)">
+                                                        <label class="form-check-label">Tidak</label>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-5">
                                             <div class="form-group">
                                                 <label class="form-label">RS Rujukan</label>
-                                                <select name="rujukan_id" id="val_equipnofc" class="form-select">
+                                                <select name="rujukan_id" id="rujuk" class="form-select">
                                                         <option></option>
                                                         <?php foreach($rs_rujuk as $r): ?>
                                                             <option value="<?= $r->id ?>"><?= $r->nama_rs ?></option>
@@ -68,7 +72,7 @@
                                         <div class="col-4">
                                             <div class="form-group">
                                                 <label class="form-label">Obat</label>
-                                                <select name="obat_id" id="o_equipnofc" class="form-select">
+                                                <select name="obat_id" id="obat" class="form-select">
                                                         <option></option>
                                                         <?php foreach($obat as $o): ?>
                                                             <option value="<?= $o->id ?>"><?= $o->nama_obat ?></option>
@@ -105,9 +109,9 @@
 <script type="text/javascript">
     function checkOption(obj) 
     {
-        var input = document.getElementById("val_equipnofc");
+        var input = document.getElementById("rujuk");
         input.disabled = obj.value == "0";
-        var input = document.getElementById("o_equipnofc");
+        var input = document.getElementById("obat");
         input.disabled = obj.value == "1";
     }
 </script>
