@@ -8,11 +8,11 @@
                 <div class="card">
                     <div class="card-body p0">
                         <?php foreach($obat as $item): ?>
-                            <form action="<?php echo base_url().'obat/update'; ?>" method="POST">
+                            <form action="<?= base_url().'obat/update'; ?>" method="POST">
                                 <div class="form-group">
                                     <label>Nama Obat</label>
-                                    <input type="hidden" name="id" id="id" value="<?php echo $item->id ?>">
-                                    <input type="text" name="nama_obat" value="<?php echo $item->nama_obat ?>" 
+                                    <input type="hidden" name="id" id="id" value="<?= $item->id ?>">
+                                    <input type="text" name="nama_obat" value="<?= $item->nama_obat ?>" 
                                     class="form-control">
                                 </div>
                             <div class="row">
@@ -20,7 +20,7 @@
                                     <div class="form-group">
                                         <label class="form-label">Jenis</label>
                                         <select name="jenis" class="form-control">
-                                            <option selected><?php echo $item->jenis ?></option>
+                                            <option selected><?= $item->jenis ?></option>
                                             <option value="Tablet">Tablet</option>
                                             <option value="Pil">Pil</option>
                                             <option value="Sirup">Sirup</option>
@@ -30,7 +30,7 @@
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label class="form-label">Stok</label>
-                                        <input type="number" name="stok" value="<?php echo $item->stok ?>" class="form-control">
+                                        <input type="number" name="stok" value="<?= $item->stok ?>" class="form-control">
                                     </div>
                                 </div>
                             </div>

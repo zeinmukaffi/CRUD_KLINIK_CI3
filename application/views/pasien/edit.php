@@ -8,7 +8,7 @@
                 <div class="card">
                     <div class="card-body p0">
                         <?php foreach($pasien as $item): ?>
-                        <form action="<?php echo base_url().'pasien/update' ?>" method="POST">
+                        <form action="<?= base_url().'pasien/update' ?>" method="POST">
                             <div class="form-group">
                                 <label>Nama Pasien</label>
                                 <input type="hidden" name="id" id="id" value="<?= $item->id; ?>">

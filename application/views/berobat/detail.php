@@ -81,10 +81,10 @@
                             <div class="d-flex gap-2 mb-3">
                                 <a href="/klinik_ci3/berobat" class="btn btn-secondary"><i class="fas fa-arrow-left"></i></a>
                                 <div onclick="javascript: return confirm('Apakah Anda Yakin Ingin Hapus Data?')">
-                                    <?php echo anchor('berobat/destroy/'.$berobat->id, '<div class="btn btn-danger"><i class="fas fa-trash"></i></div>') ?>
+                                    <?= anchor('berobat/destroy/'.$berobat->id, '<div class="btn btn-danger"><i class="fas fa-trash"></i></div>') ?>
                                 </div>
                                 <div>
-                                    <?php echo anchor('berobat/edit/'.$berobat->id, '<div class="btn btn-warning"><i class="fas fa-pen"></i></div>') ?>
+                                    <?= anchor('berobat/edit/'.$berobat->id, '<div class="btn btn-warning"><i class="fas fa-pen"></i></div>') ?>
                                 </div>
                             </div>
                         </div>

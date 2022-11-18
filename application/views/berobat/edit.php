@@ -7,7 +7,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body p0">
-                        <form action="<?php echo site_url('berobat/update/'.$berobat->id) ?>" method="POST">
+                        <form action="<?= base_url().'berobat/update'; ?>" method="POST">
                         <input type="hidden" name="id" id="id" value="<?= $berobat->id ?>">
                             <div class="row">
                                 <div class="col-6">

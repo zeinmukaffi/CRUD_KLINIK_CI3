@@ -7,7 +7,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body p0">
-                        <form action="<?php echo base_url().'dokter/store' ?>" method="POST">
+                        <form action="<?= base_url().'dokter/store' ?>" method="POST">
                             <div class="form-group">
                                 <label>Nama Dokter</label>
                                 <input type="text" required name="nama_dokter" class="form-control">

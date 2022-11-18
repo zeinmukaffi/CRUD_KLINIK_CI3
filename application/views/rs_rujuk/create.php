@@ -7,7 +7,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body p0">
-                        <form action="<?php echo base_url().'rs_rujuk/store' ?>" method="POST">
+                        <form action="<?= base_url().'rs_rujuk/store' ?>" method="POST">
                             <div class="form-group">
                                 <label class="form-label">Nama RS Rrjukan</label>
                                 <input type="text" name="nama_rs" class="form-control">

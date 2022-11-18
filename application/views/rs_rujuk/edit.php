@@ -8,7 +8,7 @@
                 <div class="card">
                     <div class="card-body p0">
                         <?php foreach($rs_rujuk as $item): ?>
-                            <form action="<?php echo base_url().'rs_rujuk/update' ?>" method="POST">
+                            <form action="<?= base_url().'rs_rujuk/update' ?>" method="POST">
                                 <div class="form-group">
                                     <label class="form-label">Nama RS Rrjukan</label>
                                     <input type="hidden" name="id" id="id" value="<?= $item->id; ?>">
