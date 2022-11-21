@@ -29,7 +29,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <a href="/klinik_ci3/dokter" class="btn btn-secondary"><i class="fas fa-arrow-left"></i></a>                        <?php endforeach;?>
+                            <a href="/klinik_ci3/dokter" class="btn btn-secondary"><i class="fas fa-arrow-left"></i></a>                        
+                        <?php endforeach;?>
                             <button type="submit" class="btn btn-primary" onclick="javascript: return confirm('Apakah Anda Yakin Ingin Edit Data?')">Simpan</button>
                     </div>
                 </div>

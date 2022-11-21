@@ -8,12 +8,14 @@
                 <div class="card">
                     <div class="card-body p0">
                         <form action="<?= base_url().'obat/store' ?>" method="POST">
-                            <div class="form-group">
-                                <label>Nama Obat</label>
-                                <input type="text" required name="nama_obat" class="form-control">
-                            </div>
                             <div class="row">
-                                <div class="col-6">
+                                <div class="col-4">
+                                    <div class="form-group">
+                                        <label>Nama Obat</label>
+                                        <input type="text" required name="nama_obat" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-4">
                                     <div class="form-group">
                                         <label class="form-label">Jenis Obat</label>
                                         <select name="jenis" class="form-control">
@@ -26,10 +28,36 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-6">
+                                <div class="col-4">
                                     <div class="form-group">
                                         <label class="form-label">Stok</label>
                                         <input type="number" name="stok" required class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="form-group">
+                                        <label class="form-label">Tanggal Kadaluwarsa</label>
+                                        <input type="date" name="tgl_exp" required class="form-control">
+                                        <label class="form-label mt-4">Keterangan</label>
+                                        <select name="ket" class="form-control">
+                                            <option selected disabled>-----</option>
+                                            <option value="1">Sesudah Makan</option>
+                                            <option value="2">Sebelum Makan</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="form-group">
+                                        <label class="form-label">Deskripsi</label>
+                                        <textarea name="deskripsi" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                <div class="form-group">
+                                        <label class="form-label">Dosis</label>
+                                        <textarea name="dosis" class="form-control"></textarea>
                                     </div>
                                 </div>
                             </div>

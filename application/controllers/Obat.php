@@ -14,6 +14,15 @@
             $this->load->view('template/footer');
         }
 
+        public function detail($id)
+          {
+              $data['obat'] = $this->Obat_m->show($id, 'obat');            
+              $this->load->view('template/header');
+              $this->load->view('template/sidebar');
+              $this->load->view('obat/detail', $data);
+              $this->load->view('template/footer');
+          }
+
         public function create()
         {
             $this->load->view('template/header');
@@ -27,11 +36,19 @@
             $nama_obat = $this->input->post('nama_obat');
             $jenis = $this->input->post('jenis');
             $stok = $this->input->post('stok');
+            $tgl_exp = $this->input->post('tgl_exp');
+            $deskripsi = $this->input->post('deskripsi');
+            $dosis = $this->input->post('dosis');
+            $ket = $this->input->post('ket');
 
             $data = array(
                 'nama_obat' => $nama_obat,
                 'jenis' => $jenis,
                 'stok' => $stok,
+                'tgl_exp' => $tgl_exp,
+                'deskripsi' => $deskripsi,
+                'dosis' => $dosis,
+                'ket' => $ket,
             );
 
             $this->Obat_m->store($data, 'obat');
@@ -63,11 +80,19 @@
             $nama_obat = $this->input->post('nama_obat');
             $jenis = $this->input->post('jenis');
             $stok = $this->input->post('stok');
+            $tgl_exp = $this->input->post('tgl_exp');
+            $deskripsi = $this->input->post('deskripsi');
+            $dosis = $this->input->post('dosis');
+            $ket = $this->input->post('ket');
 
             $data = array(
                 'nama_obat' => $nama_obat,
                 'jenis' => $jenis,
                 'stok' => $stok,
+                'tgl_exp' => $tgl_exp,
+                'deskripsi' => $deskripsi,
+                'dosis' => $dosis,
+                'ket' => $ket,
             );
 
             $where = array(

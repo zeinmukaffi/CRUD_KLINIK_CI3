@@ -35,6 +35,11 @@
             $this->db->where($where);
             $this->db->delete($table);
         }
+
+        public function show($id, $table)
+        {
+            return $this->db->where('id', $id)->get($table)->row();
+        }
     }
 
 ?>
