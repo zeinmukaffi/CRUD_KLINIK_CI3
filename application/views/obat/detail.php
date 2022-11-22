@@ -34,7 +34,7 @@
                                 <tr>
                                     <th>Deskripsi Obat</th>
                                     <td>:</td>
-                                    <td>
+                                    <td class="p-2">
                                         <?= $obat->deskripsi; ?>
                                     </td>
                                     <th>Dosis Obat</th>
@@ -46,8 +46,13 @@
                                 <tr>
                                     <th>Keterangan Obat</th>
                                     <td>:</td>
-                                    <td>
+                                    <td class="p-2">
                                         <?= $obat->ket; ?>
+                                    </td>
+                                    <th>Harga Obat</th>
+                                    <td>:</td>
+                                    <td>
+                                        <?= $obat->harga; ?>
                                     </td>
                                 </tr>
                             </tbody>

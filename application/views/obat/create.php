@@ -9,13 +9,19 @@
                     <div class="card-body p0">
                         <form action="<?= base_url().'obat/store' ?>" method="POST">
                             <div class="row">
-                                <div class="col-4">
+                                <div class="col-3">
                                     <div class="form-group">
                                         <label>Nama Obat</label>
                                         <input type="text" required name="nama_obat" class="form-control">
                                     </div>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-3">
+                                    <div class="form-group">
+                                        <label>Harga Obat</label>
+                                        <input type="number" required name="harga" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-3">
                                     <div class="form-group">
                                         <label class="form-label">Jenis Obat</label>
                                         <select name="jenis" class="form-select">
@@ -28,7 +34,7 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-3">
                                     <div class="form-group">
                                         <label class="form-label">Stok</label>
                                         <input type="number" name="stok" required class="form-control">

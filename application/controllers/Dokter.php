@@ -47,6 +47,7 @@
                   'nip'=> $this->input->post('nip'),
                   'jk'=> $this->input->post('jk'),
                   'kualifikasi'=> $this->input->post('kualifikasi'),
+                  'tarif'=> $this->input->post('tarif'),
                   'foto' => $_data['upload_data']['file_name']
                   );
               $this->Dokter_m->store($data, 'dokter');
@@ -90,6 +91,7 @@
                 'nip'=> $this->input->post('nip'),
                 'jk'=> $this->input->post('jk'),
                 'kualifikasi'=> $this->input->post('kualifikasi'),
+                'tarif'=> $this->input->post('tarif'),
               );
               $where = array(
                 'id' => $id
@@ -115,6 +117,7 @@
                   'nip'=> $this->input->post('nip'),
                   'jk'=> $this->input->post('jk'),
                   'kualifikasi'=> $this->input->post('kualifikasi'),
+                  'tarif'=> $this->input->post('tarif'),
                   'foto' => $_data['upload_data']['file_name']
                 );
                 $query = $this->db->update('dokter', $data, array('id' => $id));;

@@ -26,11 +26,13 @@
                                         <th>Nama Dokter</th>
                                         <td>:</td>
                                         <td>
-                                            <?php foreach($dokter as $d):
-                                                if($d->id == $berobat->nama_dokter_id):
-                                                    echo $d->nama_dokter; 
-                                                endif;
-                                            endforeach;?>
+                                            <?php 
+                                                foreach($dokter as $d):
+                                                    if($d->id == $berobat->nama_dokter_id):
+                                                        echo $d->nama_dokter; 
+                                                    endif;
+                                                endforeach;
+                                            ?>
                                         <th>Obat Yang Di Perlukan</th>
                                         <td>:</td>
                                         <td>
@@ -73,7 +75,27 @@
                                         <th>Biaya Berobat</th>
                                         <td>:</td>
                                         <td>
-                                            <?= $berobat->biaya; ?>
+                                            <?php
+                                                if($berobat->obat_id === null){
+                                                    $harga = 0;
+                                                }else{
+                                                    foreach($obat as $hrg):
+                                                        if($hrg->id == $berobat->obat_id):
+                                                            $harga = $hrg->harga;
+                                                        endif;
+                                                    endforeach;
+                                                }
+
+                                                foreach($dokter as $trf):
+                                                    if($trf->id == $berobat->nama_dokter_id):
+                                                        $tarif = $trf->tarif;
+                                                    endif;
+                                                endforeach;
+
+                                                $biaya = $berobat->biaya;
+                                                
+                                                echo 'Rp. '.$harga + $tarif + $biaya;
+                                            ?>
                                         </td>
                                     </tr>
                                 </tbody>

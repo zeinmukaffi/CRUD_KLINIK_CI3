@@ -40,6 +40,7 @@
             $deskripsi = $this->input->post('deskripsi');
             $dosis = $this->input->post('dosis');
             $ket = $this->input->post('ket');
+            $harga = $this->input->post('harga');
 
             $data = array(
                 'nama_obat' => $nama_obat,
@@ -49,6 +50,7 @@
                 'deskripsi' => $deskripsi,
                 'dosis' => $dosis,
                 'ket' => $ket,
+                'harga' => $harga,
             );
 
             $this->Obat_m->store($data, 'obat');
@@ -84,6 +86,7 @@
             $deskripsi = $this->input->post('deskripsi');
             $dosis = $this->input->post('dosis');
             $ket = $this->input->post('ket');
+            $harga = $this->input->post('harga');
 
             $data = array(
                 'nama_obat' => $nama_obat,
@@ -93,6 +96,7 @@
                 'deskripsi' => $deskripsi,
                 'dosis' => $dosis,
                 'ket' => $ket,
+                'harga' => $harga,
             );
 
             $where = array(

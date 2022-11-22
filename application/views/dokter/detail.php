@@ -37,6 +37,13 @@
                                     <td>
                                         <?= $dokter->kualifikasi; ?>
                                     </td>
+                                    <th>Tarif Konsul</th>
+                                    <td>:</td>
+                                    <td>
+                                        Rp. <?= $dokter->tarif; ?>
+                                    </td>
+                                </tr>
+                                <tr>
                                     <th>Foto Dokter</th>
                                     <td>:</td>
                                     <td class="p-2">

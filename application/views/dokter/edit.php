@@ -28,16 +28,22 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-6">
+                                <div class="col-4">
                                     <div class="form-group">
                                         <label class="form-label">NIP (Nomor Induk Pegawai)</label>
                                         <input type="number" value="<?= $item->nip ?>" name="nip" class="form-control">
                                     </div>
                                 </div>
-                                <div class="col-6">
+                                <div class="col-4">
                                     <div class="form-group">
                                         <label class="form-label">SIP (Surat Izin Praktek)</label>
                                         <input type="number" name="sip" value="<?= $item->sip ?>" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="form-group">
+                                        <label class="form-label">Tarif Perpasien</label>
+                                        <input type="number" name="tarif" value="<?= $item->tarif ?>" class="form-control">
                                     </div>
                                 </div>
                             </div>

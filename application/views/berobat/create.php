@@ -82,18 +82,13 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-6">
+                                        <div class="col-12">
                                             <div class="form-group">
                                                     <label class="form-label">Tanggal Berobat</label>
                                                     <input required type="date" class="form-control" name="tgl_berobat">
                                                 </div>
                                             </div>
-                                            <div class="col-6">
-                                                <div class="form-group">
-                                                    <label class="form-label">Biaya Berobat</label>
-                                                    <input required type="number" name="biaya" class="form-control">
-                                                </div>
-                                            </div>
+                                            <input required type="hidden" value="15000" name="biaya" class="form-control">
                                         </div>
                                     </div>
                             </div>
