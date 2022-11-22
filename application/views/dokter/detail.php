@@ -1,6 +1,6 @@
 <div class="main-content">
     <section class="section">
-        <div class="section-header"><h1>Detail Data Obat</h1></div>
+        <div class="section-header"><h1>Detail Data Dokter</h1></div>
         <div class="row">
             <div class="col-12">
                 <div class="card">
@@ -8,57 +8,50 @@
                         <table class="table table-stripped">
                             <tbody>
                                 <tr>
-                                    <th>Nama Obat</th>
+                                    <th>Nama Dokter</th>
                                     <td>:</td>
                                     <td>
-                                        <?= $obat->nama_obat; ?>
+                                        <?= $dokter->nama_dokter; ?>
                                     </td>
-                                    <th>Jenis Obat</th>
+                                    <th>Jenis Kelamin</th>
                                     <td>:</td>
                                     <td>
-                                        <?= $obat->jenis; ?>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>Stok Obat</th>
-                                    <td>:</td>
-                                    <td>
-                                        <?= $obat->stok; ?>
-                                    </td>
-                                    <th>Tanggal Kadaluwarsa</th>
-                                    <td>:</td>
-                                    <td>
-                                        <?= $obat->tgl_exp; ?>
+                                        <?= $dokter->jk; ?>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>Deskripsi Obat</th>
+                                    <th>Nomor Induk Pegawai</th>
                                     <td>:</td>
                                     <td>
-                                        <?= $obat->deskripsi; ?>
+                                        <?= $dokter->nip; ?>
                                     </td>
-                                    <th>Dosis Obat</th>
+                                    <th>Nomor SIP (Surat Izin Praktik)</th>
                                     <td>:</td>
                                     <td>
-                                        <?= $obat->dosis; ?>
+                                        <?= $dokter->sip; ?>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>Keterangan Obat</th>
+                                    <th>Kualifikasi Dokter</th>
                                     <td>:</td>
                                     <td>
-                                        <?= $obat->ket; ?>
+                                        <?= $dokter->kualifikasi; ?>
+                                    </td>
+                                    <th>Foto Dokter</th>
+                                    <td>:</td>
+                                    <td class="p-2">
+                                        <img src="<?= base_url(); ?>assets/foto/<?= $dokter->foto ?>" style="width: 100px;">
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                         <div class="d-flex gap-2">
-                            <a href="/klinik_ci3/obat" class="btn btn-secondary"><i class="fas fa-arrow-left"></i></a>
+                            <a href="/klinik_ci3/dokter" class="btn btn-secondary"><i class="fas fa-arrow-left"></i></a>
                             <div onclick="javascript: return confirm('Apakah Anda Yakin Ingin Hapus Data?')">
-                                <?= anchor('obat/destroy/'.$obat->id, '<div class="btn btn-danger"><i class="fas fa-trash"></i></div>') ?>
+                                <?= anchor('dokter/destroy/'.$dokter->id, '<div class="btn btn-danger"><i class="fas fa-trash"></i></div>') ?>
                             </div>
                             <div>
-                                <?= anchor('obat/edit/'.$obat->id, '<div class="btn btn-warning"><i class="fas fa-pen"></i></div>') ?>
+                                <?= anchor('dokter/edit/'.$dokter->id, '<div class="btn btn-warning"><i class="fas fa-pen"></i></div>') ?>
                             </div>
                         </div>
                     </div>

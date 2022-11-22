@@ -16,7 +16,7 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Nama Dokter</th>
-                                        <th>NIP</th>
+                                        <th>Kualifikasi</th>
                                         <th>SIP</th>
                                         <th>Aksi</th>
                                     </tr>
@@ -28,12 +28,16 @@
                                         <tr>
                                             <td><?= $no++ ?></td>
                                             <td><?= $item->nama_dokter ?></td>
-                                            <td><?= $item->nip ?></td>
+                                            <td><?= $item->kualifikasi ?></td>
                                             <td><?= $item->sip ?></td>
                                             <td class="d-flex" style="gap: 0.5rem;">
                                                 <div>
                                                     <?= anchor('dokter/edit/'.$item->id, '<div data-toggle="tooltip"
 															title="Edit" class="btn btn-warning"><i class="fas fa-pen"></i></div>') ?>
+                                                </div>
+                                                <div>
+                                                    <?= anchor('dokter/detail/'.$item->id, '<div data-toggle="tooltip"
+															title="Details" class="btn btn-info"><i class="fas fa-eye"></i></div>')?>
                                                 </div>
                                                 <div onclick="javascript: return confirm('Apakah Anda Yakin Ingin Hapus Data?')">
                                                     <?= anchor('dokter/destroy/'.$item->id, '<div data-toggle="tooltip"

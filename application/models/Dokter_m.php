@@ -9,6 +9,11 @@
             return $this->db->get('dokter')->result();
         }
 
+        public function show($id, $table)
+        {
+            return $this->db->where('id', $id)->get($table)->row();
+        }
+
         public function count()
         {
             return $this->db->from("dokter")->count_all_results();
@@ -18,7 +23,7 @@
         {
             $this->db->insert($table, $data);
         }
-
+        
         public function edit($where, $table)
         {
             return $this->db->get_where($table, $where);

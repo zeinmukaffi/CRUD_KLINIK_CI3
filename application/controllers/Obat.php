@@ -15,13 +15,13 @@
         }
 
         public function detail($id)
-          {
-              $data['obat'] = $this->Obat_m->show($id, 'obat');            
-              $this->load->view('template/header');
-              $this->load->view('template/sidebar');
-              $this->load->view('obat/detail', $data);
-              $this->load->view('template/footer');
-          }
+        {
+            $data['obat'] = $this->Obat_m->show($id, 'obat');            
+            $this->load->view('template/header');
+            $this->load->view('template/sidebar');
+            $this->load->view('obat/detail', $data);
+            $this->load->view('template/footer');
+        }
 
         public function create()
         {

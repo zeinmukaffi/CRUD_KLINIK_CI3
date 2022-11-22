@@ -18,7 +18,7 @@
                                 <div class="col-4">
                                     <div class="form-group">
                                         <label class="form-label">Jenis Obat</label>
-                                        <select name="jenis" class="form-control">
+                                        <select name="jenis" class="form-select">
                                             <option selected disabled>-----</option>
                                             <option value="Tablet">Tablet</option>
                                             <option value="Sirup">Sirup</option>
@@ -41,10 +41,10 @@
                                         <label class="form-label">Tanggal Kadaluwarsa</label>
                                         <input type="date" name="tgl_exp" required class="form-control">
                                         <label class="form-label mt-4">Keterangan</label>
-                                        <select name="ket" class="form-control">
+                                        <select name="ket" class="form-select">
                                             <option selected disabled>-----</option>
-                                            <option value="1">Sesudah Makan</option>
-                                            <option value="2">Sebelum Makan</option>
+                                            <option value="Sesudah Makan">Sesudah Makan</option>
+                                            <option value="Sebelum Makan">Sebelum Makan</option>
                                         </select>
                                     </div>
                                 </div>
