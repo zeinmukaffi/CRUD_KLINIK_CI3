@@ -15,11 +15,9 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Nama Pasien</th>
-                                        <!-- <th>Alamat</th> -->
                                         <th>Jenis Kelamin</th>
-                                        <!-- <th>No Telepon</th> -->
                                         <th>Tanggal Lahir</th>
-                                        <th>Aksi</th>
+                                        <th style="width: 200px;">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -29,9 +27,7 @@
                                         <tr>
                                             <td><?= $no++ ?></td>
                                             <td><?= $item->nama_pasien ?></td>
-                                            <!-- <td><?= $item->alamat ?></td> -->
                                             <td><?= $item->jk ?></td>
-                                            <!-- <td><?= $item->no_telp ?></td> -->
                                             <td><?= $item->tgl_lahir ?></td>
                                             <td class="d-flex" style="gap: 0.5rem;">
                                                 <div>

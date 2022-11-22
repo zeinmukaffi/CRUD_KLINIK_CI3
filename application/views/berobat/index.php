@@ -17,7 +17,7 @@ d<div class="main-content">
                                         <th>Nama Pasien</th>
                                         <th>Tanggal Berobat</th>
                                         <th>Nama Dokter</th>
-                                        <th>Aksi</th>
+                                        <th style="width: 200px;">Aksi</th>
                                     </tr>
                                     
                                 </thead>

@@ -14,9 +14,9 @@
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Nama RS Rujukan</th>
-                                        <th>Alamat</th>
-                                        <th>Aksi</th>
+                                        <th style="width: 200px;">Nama RS Rujukan</th>
+                                        <th style="width: 600px;">Alamat</th>
+                                        <th style="width: 100px;">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -27,8 +27,8 @@
                                             <td><?= $no++; ?></td>
                                             <td><?= $item->nama_rs ?></td>
                                             <td><?= $item->alamat ?></td>
-                                            <td class="d-flex" style="gap: 0.5rem;">
-                                                <div>
+                                            <td class="pt-2" style="gap: 0.5rem;">
+                                                <div class="pb-2">
                                                     <?= anchor('rs_rujuk/edit/'.$item->id, '<div data-toggle="tooltip"
 															title="Edit" class="btn btn-warning"><i class="fas fa-pen"></i></div>') ?>
                                                 </div>

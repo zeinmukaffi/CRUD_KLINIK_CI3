@@ -75,59 +75,63 @@
 
         public function update()
         {
-          $id = $this->input->post('id');
-          $_image = $this->db->get_where('dokter',['id' => $id])->row();
+            $id = $this->input->post('id');
+            $_image = $this->db->get_where('dokter',['id' => $id])->row();
 
-          $config['upload_path'] = './assets/foto';
-          $config['allowed_types'] = 'jpeg|jpg|png';
-          $this->load->library('upload', $config);
-          if (!$this->upload->do_upload('foto')){
-            $data = array(
-              'nama_dokter'=> $this->input->post('nama_dokter'),
-              'sip'=> $this->input->post('sip'),
-              'nip'=> $this->input->post('nip'),
-              'jk'=> $this->input->post('jk'),
-              'kualifikasi'=> $this->input->post('kualifikasi'),
-            );
-            $where = array(
-              'id' => $id
-            );
-            $this->Dokter_m->update($where, $data, 'dokter');
-            $this->session->set_flashdata('message', 
-              '<div class="alert alert-warning alert-dismissible show fade">
-              <div class="alert-body">
-                <button class="close" data-dismiss="alert">
-                  <span>&times;</span>
-                </button>
-                Data Berhasil Di Update
-              </div>
-              </div>');
-              redirect('dokter/index');
-          }else{
-              $_data = array('upload_data' => $this->upload->data());
+            $config['upload_path'] = './assets/foto';
+            $config['allowed_types'] = 'jpeg|jpg|png';
+
+            $this->load->library('upload', $config);
+            // update data without update img
+            if (!$this->upload->do_upload('foto')){
               $data = array(
                 'nama_dokter'=> $this->input->post('nama_dokter'),
                 'sip'=> $this->input->post('sip'),
                 'nip'=> $this->input->post('nip'),
                 'jk'=> $this->input->post('jk'),
                 'kualifikasi'=> $this->input->post('kualifikasi'),
-                'foto' => $_data['upload_data']['file_name']
               );
-              $query = $this->db->update('dokter', $data, array('id' => $id));;
-              if($query){
-                  unlink("foto/".$_image->foto);
-              }
+              $where = array(
+                'id' => $id
+              );
+              $this->Dokter_m->update($where, $data, 'dokter');
               $this->session->set_flashdata('message', 
-              '<div class="alert alert-warning alert-dismissible show fade">
-              <div class="alert-body">
-                <button class="close" data-dismiss="alert">
-                  <span>&times;</span>
-                </button>
-                Data Berhasil Di Update
-              </div>
-              </div>');
-              redirect('dokter/index');
-          }
+                '<div class="alert alert-warning alert-dismissible show fade">
+                <div class="alert-body">
+                  <button class="close" data-dismiss="alert">
+                    <span>&times;</span>
+                  </button>
+                  Data Berhasil Di Update
+                </div>
+                </div>');
+                redirect('dokter/index');
+            }
+            // update data with img
+            else{
+                $_data = array('upload_data' => $this->upload->data());
+                $data = array(
+                  'nama_dokter'=> $this->input->post('nama_dokter'),
+                  'sip'=> $this->input->post('sip'),
+                  'nip'=> $this->input->post('nip'),
+                  'jk'=> $this->input->post('jk'),
+                  'kualifikasi'=> $this->input->post('kualifikasi'),
+                  'foto' => $_data['upload_data']['file_name']
+                );
+                $query = $this->db->update('dokter', $data, array('id' => $id));;
+                if($query){
+                    unlink("foto/".$_image->foto);
+                }
+                $this->session->set_flashdata('message', 
+                '<div class="alert alert-warning alert-dismissible show fade">
+                <div class="alert-body">
+                  <button class="close" data-dismiss="alert">
+                    <span>&times;</span>
+                  </button>
+                  Data Berhasil Di Update
+                </div>
+                </div>');
+                redirect('dokter/index');
+            }
         }
 
         public function destroy($id)

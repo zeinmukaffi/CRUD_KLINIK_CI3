@@ -15,12 +15,8 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Nama Obat</th>
-                                        <!-- <th>Jenis Obat</th> -->
                                         <th>Stok</th>
-                                        <!-- <th>Deskripsi</th> -->
-                                        <!-- <th>Dosis</th> -->
-                                        <!-- <th>Tanggal Kadaluwarsa</th> -->
-                                        <th>Aksi</th>
+                                        <th style="width: 200px;">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -30,11 +26,7 @@
                                         <tr>
                                             <td><?= $no++; ?></td>
                                             <td><?= $item->nama_obat ?></td>
-                                            <!-- <td><?= $item->jenis ?></td> -->
                                             <td><?= $item->stok ?></td>
-                                            <!-- <td><?= $item->deskripsi ?></td> -->
-                                            <!-- <td><?= $item->dosis ?></td> -->
-                                            <!-- <td><?= $item->tgl_exp ?></td> -->
                                             <td class="d-flex" style="gap: 0.5rem;">
                                                 <div>
                                                     <?= anchor('obat/edit/'.$item->id, '<div data-toggle="tooltip"

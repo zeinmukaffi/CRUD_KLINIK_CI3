@@ -18,7 +18,7 @@
                                         <th>Nama Dokter</th>
                                         <th>Kualifikasi</th>
                                         <th>SIP</th>
-                                        <th>Aksi</th>
+                                        <th style="width: 200px;">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
