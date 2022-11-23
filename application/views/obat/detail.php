@@ -39,14 +39,14 @@
                                     </td>
                                     <th>Dosis Obat</th>
                                     <td>:</td>
-                                    <td>
+                                    <td class="p-2">
                                         <?= $obat->dosis; ?>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>Keterangan Obat</th>
                                     <td>:</td>
-                                    <td class="p-2">
+                                    <td>
                                         <?= $obat->ket; ?>
                                     </td>
                                     <th>Harga Obat</th>

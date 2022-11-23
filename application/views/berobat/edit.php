@@ -93,18 +93,13 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                            <div class="col-6">
-                                                <div class="form-group">
+                                        <div class="col-12">
+                                            <div class="form-group">
                                                     <label class="form-label">Tanggal Berobat</label>
-                                                    <input type="date" value="<?= $berobat->tgl_berobat; ?>" class="form-control" name="tgl_berobat">
+                                                    <input required type="date" value="<?= $berobat->tgl_berobat ?>" class="form-control" name="tgl_berobat">
                                                 </div>
                                             </div>
-                                            <div class="col-6">
-                                                <div class="form-group">
-                                                    <label class="form-label">Biaya Berobat</label>
-                                                    <input type="number" name="biaya" value="<?= $berobat->biaya; ?>" class="form-control">
-                                                </div>
-                                            </div>
+                                            <input required type="hidden" value="<?= $berobat->biaya ?>" name="biaya" class="form-control">
                                         </div>
                                     </div>
                                 </div>

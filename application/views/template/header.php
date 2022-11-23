@@ -9,19 +9,19 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
 	<!-- General CSS Files -->
-	<link rel="stylesheet" href="<?php echo base_url() ?>assets/modules/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="<?php echo base_url() ?>assets/modules/fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="<?= base_url() ?>assets/modules/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="<?= base_url() ?>assets/modules/fontawesome/css/all.min.css">
 
 	<!-- CSS Libraries -->
-	<link rel="stylesheet" href="<?php echo base_url() ?>assets/modules/jqvmap/dist/jqvmap.min.css">
-	<link rel="stylesheet" href="<?php echo base_url() ?>assets/modules/weather-icon/css/weather-icons.min.css">
-	<link rel="stylesheet" href="<?php echo base_url() ?>assets/modules/weather-icon/css/weather-icons-wind.min.css">
-	<link rel="stylesheet" href="<?php echo base_url() ?>assets/modules/summernote/summernote-bs4.css">
+	<link rel="stylesheet" href="<?= base_url() ?>assets/modules/jqvmap/dist/jqvmap.min.css">
+	<link rel="stylesheet" href="<?= base_url() ?>assets/modules/weather-icon/css/weather-icons.min.css">
+	<link rel="stylesheet" href="<?= base_url() ?>assets/modules/weather-icon/css/weather-icons-wind.min.css">
+	<link rel="stylesheet" href="<?= base_url() ?>assets/modules/summernote/summernote-bs4.css">
 
     <script src="https://kit.fontawesome.com/a953ebe10c.js" crossorigin="anonymous"></script>
 	<!-- Template CSS -->
-	<link rel="stylesheet" href="<?php echo base_url() ?>assets/css/style.css">
-	<link rel="stylesheet" href="<?php echo base_url() ?>assets/css/components.css">
+	<link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css">
+	<link rel="stylesheet" href="<?= base_url() ?>assets/css/components.css">
 	<!-- Start GA -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
 	<script>
@@ -54,12 +54,12 @@
 				<ul class="navbar-nav navbar-right">
 					<li class="dropdown"><a href="#" data-toggle="dropdown"
 							class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-							<img alt="image" src="<?php echo base_url() ?>assets/img/avatar/avatar-1.png"
+							<img alt="image" src="<?= base_url() ?>assets/img/avatar/avatar-1.png"
 								class="rounded-circle mr-1">
-							<div class="d-sm-none d-lg-inline-block">Hi, <?php echo $this->session->userdata("nama"); ?></div>
+							<div class="d-sm-none d-lg-inline-block">Hi, <?= $this->session->userdata("nama"); ?></div>
 						</a>
 						<div class="dropdown-menu dropdown-menu-right">
-							<a href="<?php echo base_url('auth/logout'); ?>" class="dropdown-item has-icon text-danger">
+							<a href="<?= base_url('auth/logout'); ?>" class="dropdown-item has-icon text-danger">
 								<i class="fas fa-sign-out-alt"></i> Logout
 							</a>
 						</div>

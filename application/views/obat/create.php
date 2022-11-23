@@ -29,7 +29,7 @@
                                             <option value="Tablet">Tablet</option>
                                             <option value="Sirup">Sirup</option>
                                             <option value="Kapsul">Kapsul</option>
-                                            <option value="Salep">Salep</option>
+                                            <option value="Gel">Gel</option>
                                             <option value="Obat Tetes">Obat Tetes</option>
                                         </select>
                                     </div>
@@ -51,6 +51,7 @@
                                             <option selected disabled>-----</option>
                                             <option value="Sesudah Makan">Sesudah Makan</option>
                                             <option value="Sebelum Makan">Sebelum Makan</option>
+                                            <option value="Obat Luar">Obat Luar</option>
                                         </select>
                                     </div>
                                 </div>
